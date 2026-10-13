@@ -1,33 +1,12 @@
-# 06. Manifesto visual
+# 06 · Manifesto visual
 
-Referência de composição: componentes e ativos correspondentes do starter oficial 50 Lições/Enem. Referência de conteúdo: arquivos reais do produto (pendentes).
+| ID | Seção | Encaixe | Conteúdo real | Referência de composição (modelo) | Método | Status |
+|---|---|---|---|---|---|---|
+| IMG-01 | Hero / Oferta | `.hero-media` 570×360 (290 no celular) | capa + 3 páginas + app | `ProductComposition`, `hero-capa-principal` | camadas CSS com arquivos reais | aprovado |
+| IMG-02 | Galeria | cartões 280 px, ~3:4 | 6 páginas do ebook | `gallery-card` | captura real do leitor | aprovado |
+| IMG-03 | Demonstração | `.usage-photo` 3:4 | 6 telas do app | `uso-*.webp` | tela real em moldura (Pillow) | aprovado |
+| IMG-04 | Pitch | `.mid-pitch-media` 1536×1024 | capas + app | `mockup-midpitch-v3` | composição Pillow | aprovado |
+| IMG-05 | Produto completo | `.receive-media` 1536×1024 | capas + 2 telas | `mockup-receive-v2` | composição Pillow | aprovado |
+| IMG-06..08 | Bônus | capa + 2 páginas | capas e páginas reais | `bonus-*-capa/pagina` | arquivos reais | aprovado |
 
-| ID | Seção | Encaixe | Produto real (conteúdo) | Referência oficial 50 Lições/Enem (composição) | Saída | Método | Status |
-|---|---|---|---|---|---|---|---|
-| M01 | Hero | 570×360, 3:2; mobile 290 | capa-ebook + tela-resumo + tela-acompanhamento + tela-momento | `ProductComposition` + `hero-capa-principal.webp` | `ProductComposition` (CSS) | HTML/CSS com arquivos reais | aguardando arquivos reais |
-| M02 | Galeria | cartão 9:19,5 | 6 prints (momento, capítulo, resumo, acompanhamento, central, biblioteca) | `mapa-*.webp` (carrossel em loop) | arquivos reais diretos | sem regeneração | aguardando arquivos reais |
-| M03 | Mecanismo | celular 210 px | tela-momento | mecanismo com página real em destaque | `.phone-mockup--static` | HTML/CSS | aguardando arquivo real |
-| M04 | Uso | cartão 9:19,5 | tela-audio, tela-anotacoes, tela-certificado, tela-modo-escuro | `uso/*.webp` (carrossel de uso) | arquivos reais em moldura | HTML/CSS (sem pessoas) | aguardando arquivos reais |
-| M05 | Pitch | ~3:2, 410 de altura | capa-ebook + tela-capitulo | `mockup-midpitch-v3.png` | `.pitch-composition` | HTML/CSS | aguardando arquivos reais |
-| M06 | Recebe | 760×420 | capa-ebook + 2 capas de bônus | `mockup-receive-v2.png` | `.collection` | HTML/CSS | aguardando arquivos reais |
-| M07 | Bônus 01 | 3:4 | bonus-liberdade-capa | `bonus-edital-mockup-v3.png` | `.bonus-book` | HTML/CSS, capa isolada | aguardando arquivo real |
-| M08 | Bônus 02 | 3:4 | bonus-financas-capa | `bonus-plano-mockup-v3.png` | `.bonus-book` | HTML/CSS, capa isolada | aguardando arquivo real |
-| M09 | Bônus 03 | 9:19,5 | tela-biblioteca | `bonus-plano-mockup-v3.png` | `.bonus-device` | HTML/CSS (sem capa: novos ebooks semanais) | aguardando arquivo real |
-| M10 | Oferta | ~2:1 | igual ao hero | `ProductComposition compact` | `ProductComposition compact` | HTML/CSS | aguardando arquivos reais |
-| — | Antes × Depois | — | — | comparador | — | — | **omitido** (sem fonte legítima) |
-| — | Prova social | — | — | avatares | — | — | **omitido** (sem depoimentos) |
-| — | Garantia | — | — | — | HTML/CSS + ícone | HTML/CSS | aprovado |
-
-## Nota de método (Image 2.5 High)
-
-A skill pede Image 2.5 High como padrão para hero, coleção, bônus, oferta e cenas de uso. Para este produto, **a composição foi feita em HTML/CSS com os arquivos reais**, porque:
-
-1. todo o conteúdo visual é interface de app e capas de ebook, onde qualquer redesenho de texto pela IA reprova o ativo;
-2. o manifesto permite HTML/CSS quando fidelidade literal pesa mais que ambientação;
-3. não foi possível confirmar a seleção explícita de Image 2.5 High nesta sessão.
-
-Se o usuário quiser mockups ambientados (por exemplo, o celular sobre uma mesa), isso pode ser gerado depois, a partir dos mesmos arquivos reais.
-
-## Cenas com pessoas
-
-Nenhuma. Sem depoimentos e sem fotos reais autorizadas, não há pessoa decorativa na página.
+**Aviso de método:** as composições foram montadas com os arquivos reais do produto e não com o Image 2.5 High. A ferramenta de geração não estava disponível nesta sessão, e mockup montado com arquivo real não inventa nem altera capa, texto ou tela. O script está em `work/gerar-imagens.py`. Se quiser o acabamento do Image 2.5 High, é só gerar os 3 mockups (IMG-01, 04 e 05) a partir desses mesmos arquivos.
